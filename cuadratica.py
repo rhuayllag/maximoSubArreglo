@@ -1,12 +1,11 @@
-def max_subarray_cubica(a):
+def max_subarray_cuadratica(a):
     n = len(a)
     mejor = float('-inf')
 
     for i in range(n):
+        suma = 0
         for j in range(i, n):
-            suma = 0
-            for k in range(i, j + 1):
-                suma += a[k]
+            suma += a[j]
             if suma > mejor:
                 mejor = suma
 
